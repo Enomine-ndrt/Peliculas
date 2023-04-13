@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     private fun prepareRecyclerView() {
        movieAdapter = MovieAdapter(this)
         binding.rvMovies.apply {
-            layoutManager = GridLayoutManager(applicationContext,1)
+            layoutManager = GridLayoutManager(applicationContext,1,GridLayoutManager.HORIZONTAL,false)
             adapter = movieAdapter
         }
     }
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     private fun  prepareRecyclerViewMovieNow(){
         movieAdapterNow = MovieAdapterNow(this)
         binding.rvMoviesCartelera.apply {
-            layoutManager = GridLayoutManager(applicationContext,1)
+            layoutManager = GridLayoutManager(applicationContext,1,GridLayoutManager.HORIZONTAL,false)
             adapter = movieAdapterNow
         }
     }
